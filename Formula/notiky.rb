@@ -5,21 +5,21 @@
 class Notiky < Formula
   desc "Notiky CLI — local agent runtime and management tool for the Notiky platform"
   homepage "https://github.com/notiky/notiky-cli"
-  version "0.1.6"
+  version "0.1.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/notiky/notiky-cli/releases/download/v0.1.6/notiky_darwin_amd64.tar.gz"
-      sha256 "186ee9f453ec01cefb3503016173d36a320e606b9f7f89d431e11da5917c84c9"
+      url "https://github.com/notiky/notiky-cli/releases/download/v0.1.7/notiky_darwin_amd64.tar.gz"
+      sha256 "f4158b4a42c9d56c36318df45b5cac917fdb6149e2bcd44b1677b4435fd90838"
 
       define_method(:install) do
         bin.install "notiky"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/notiky/notiky-cli/releases/download/v0.1.6/notiky_darwin_arm64.tar.gz"
-      sha256 "d829bd711bc1942ef5b44c16e9144c45d72cf4410ab4bca5b344c95e77d989f4"
+      url "https://github.com/notiky/notiky-cli/releases/download/v0.1.7/notiky_darwin_arm64.tar.gz"
+      sha256 "1d5d1d41dd9c51904839344eccab3c965b1129893cce8d125c1311e78773e428"
 
       define_method(:install) do
         bin.install "notiky"
@@ -29,15 +29,15 @@ class Notiky < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/notiky/notiky-cli/releases/download/v0.1.6/notiky_linux_amd64.tar.gz"
-      sha256 "e7d31e3ea517573958502764324b753142b26b47fc932465bb1200d4628f94d4"
+      url "https://github.com/notiky/notiky-cli/releases/download/v0.1.7/notiky_linux_amd64.tar.gz"
+      sha256 "338ba004a93417a6c48c4d79d0f0c18919948e6d5d8c7e722ba108f1e9558ea2"
       define_method(:install) do
         bin.install "notiky"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/notiky/notiky-cli/releases/download/v0.1.6/notiky_linux_arm64.tar.gz"
-      sha256 "b9289d363c0361d64b5dd4b5077660a815e30b076220caa83c5ab056d2d0faa2"
+      url "https://github.com/notiky/notiky-cli/releases/download/v0.1.7/notiky_linux_arm64.tar.gz"
+      sha256 "3cb213688f25e0048fa7c8fab3507216b1925a7f6f872c39f83bc5050671e4d9"
       define_method(:install) do
         bin.install "notiky"
       end
